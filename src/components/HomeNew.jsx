@@ -17,7 +17,7 @@ import HomeNewMobile from "./mobile/HomeNewMobile";
 const HomeNew = () => {
   const [isMobile, setIsMobile] = useState(false);
   const isMobileQuery = useMediaQuery({ query: `(max-width: 767px)` });
-  const [images, setImages] = useState([
+  const images = [
     Image1,
     Image2,
     Image3,
@@ -28,7 +28,7 @@ const HomeNew = () => {
     Image8,
     Image9,
     Image10,
-  ]);
+  ];
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -75,21 +75,25 @@ const HomeNew = () => {
   }, [isMobileQuery]);
 
   useEffect(() => {
-    const imagePromises = images.map((image) => {
-      return new Promise((resolve) => {
+    const preloadImages = () => {
+      let loadedImages = 0;
+      images.forEach((src) => {
         const img = new Image();
-        img.src = image;
-        img.onload = resolve;
+        img.src = src;
+        img.onload = () => {
+          loadedImages++;
+          if (loadedImages === images.length) {
+            setAllImagesLoaded(true);
+          }
+        };
       });
-    });
+    };
 
-    Promise.all(imagePromises).then(() => {
-      setAllImagesLoaded(true);
-    });
+    preloadImages();
   }, [images]);
 
   if (!allImagesLoaded) {
-    return <div>Loading...</div>;
+    return <div className={styles.spinner}></div>;
   }
 
   if (isMobile) {
