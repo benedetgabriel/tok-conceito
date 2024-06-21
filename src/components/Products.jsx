@@ -101,9 +101,12 @@ const Products = () => {
 
   return (
     <section id="product">
+      <div className={styles.container_title_products}>
+        <h1 className={styles.title_products}>Produtos</h1>
+      </div>
       <div className={styles.container_images}>
         <div>
-          <p className={styles.title_products}>Cortinas</p>
+          {/* <p className={styles.title_products}>Cortinas</p> */}
           <div className={styles.container_content_imgs}>
             <div className={styles.imgs}>
               <div
@@ -169,7 +172,7 @@ const Products = () => {
 
       <div className={styles.container_images}>
         <div>
-          <p className={styles.title_products}>Persianas</p>
+          {/* <p className={styles.title_products}>Persianas</p> */}
           <div className={styles.container_content_imgs}>
             <div className={styles.imgs}>
               <div
@@ -231,7 +234,7 @@ const Products = () => {
 
       <div className={styles.container_images}>
         <div>
-          <p className={styles.title_products}>Tapetes</p>
+          {/* <p className={styles.title_products}>Tapetes</p> */}
           <div className={styles.container_content_imgs}>
             <div className={styles.imgs}>
               <div
@@ -281,7 +284,7 @@ const Products = () => {
         </div>
       </div>
 
-      <div className={styles.container_images}>
+      {/* <div className={styles.container_images}>
         <div>
           <p className={styles.title_products}>Roupa de Cama</p>
           <div className={styles.container_content_imgs}>
@@ -315,13 +318,13 @@ const Products = () => {
                 className={styles.img}
                 onClick={() => openCarousel([Colchas])}
               >
-                {/* <img src={Colchas} alt="Cortina Azul" /> */}
+                <img src={Colchas} alt="Cortina Azul" />
                 <span className={styles.imgText}>Almofadas</span>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {selectedImages.length > 0 && (
         <div className={styles.carouselContainer}>

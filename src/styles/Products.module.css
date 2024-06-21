@@ -54,8 +54,16 @@
   gap: 1rem;
 }
 
+.container_title_products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
 .title_products {
-  font-size: 2.25rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #c8882c;
   margin-bottom: 1rem;
