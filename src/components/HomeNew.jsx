@@ -185,7 +185,7 @@ const HomeNew = () => {
           </div>
         </div>
 
-        <div className={styles.details_bottom}></div>
+        {/* <div className={styles.details_bottom}></div> */}
       </section>
     </>
   );
