@@ -130,7 +130,7 @@ const ProductsMobile = () => {
         </button>
         <button
           ref={(ref) => {
-            buttonRefs.current[1] = ref;
+            buttonRefs.current[0] = ref;
             centeredButtonRef.current = ref;
           }}
           onClick={() => setProduct("Persianas")}
@@ -196,7 +196,7 @@ const ProductsMobile = () => {
               }
             >
               <img src={Produc2PW} alt="Cortina Azul" />
-              <span className={styles.imgText}>Prega Wave</span>
+              <span className={styles.imgText}>Prega Wave</span>              
             </div>
 
             <div
