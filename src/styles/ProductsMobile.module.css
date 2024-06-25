@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 2rem; 
   gap: 1.25rem;
+  padding: 0px 20px 20px 2.5rem;
 }
 
 .container_buttons button {
@@ -58,23 +59,19 @@
   object-fit: cover;
 }
 
-.img:hover .imgText {
-  display: block;
-  animation: reveal .8s forwards;
-}
 
 .imgText {
-  display: none;
+  display: block;
   position: absolute;
-  top: 73%;
+  top: 65%;
   left: 0;
-  width: 0;
+  width: 200px;
   color: #fff;
   background-color: #C8882C;
   padding: 1rem;
   text-align: center;
   border-radius: 0 .5rem .5rem 0;
-  font-size: 1.5rem;
+  font-size: 1rem;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -154,7 +151,7 @@
     gap: 1.25rem;
     overflow-x: scroll;
     white-space: nowrap;
-    margin-top: 5rem;
+    margin-top: 2rem;
     width: 100%;
   }
   .container_buttons button {
@@ -194,7 +191,7 @@
     gap: 0rem;
   }
   .imgText {
-    top: 55%;
+    top: 65%;
     padding: .8rem;
   }
   .details_bottom::after {
